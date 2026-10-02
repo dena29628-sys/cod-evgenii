@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="EvgenIIControl — учебная система управления автопарком"
+    >
+    <title>EvgenIIControl — Управление автопарком</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+    <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Переключить светлую и тёмную тему"
+        onclick="document.body.classList.toggle('dark')"
+    >
+        🌓 Тема
+    </button>
+
+    <header class="site-header">
+        <a class="logo" href="#top" aria-label="FleetControl — главная страница">
+            EvgenII<span>Control</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+            <a href="#dashboard">Главная</a>
+            <a href="#vehicles">Автомобили</a>
+            <a href="#projects">Модули</a>
+            <a href="#request">Заявка</a>
+        </nav>
+
+        <a class="header-button btn" href="#request">Добавить авто</a>
+    </header>
+
+    <main>
+        <section class="hero" id="dashboard">
+            <p class="eyebrow">Учебный веб-проект</p>
+            <h1>Управляйте автопарком <span>в одном месте</span></h1>
+            <p class="hero-text">
+                EvgenIIControl помогает контролировать автомобили, пробег,
+                техническое обслуживание, расходы и заявки на ремонт.
+            </p>
+
+            <section class="stats" aria-label="Ключевые показатели автопарка">
+                <article class="stat-card">
+                    <p class="stat-number">6</p>
+                    <p class="stat-label">Всего автомобилей</p>
+                </article>
+
+                <article class="stat-card">
+                    <p class="stat-number">3</p>
+                    <p class="stat-label">В работе</p>
+                </article>
+
+                <article class="stat-card alert-stat">
+                    <p class="stat-number">3</p>
+                    <p class="stat-label">Требуют внимания</p>
+                </article>
+            </section>
+        </section>
+
+        <section class="section-heading" id="vehicles">
+            <p class="eyebrow">Автопарк</p>
+            <h2>Автомобили компании</h2>
+            <p>
+                Текущий статус, пробег и закреплённые водители для каждого
+                транспортного средства.
+            </p>
+        </section>
+
+        <section class="cards-section" aria-label="Список автомобилей">
+            <article class="card vehicle-card">
+                <span class="badge">NEW</span>
+                <img
+                    class="car-image"
+                    src="images/camry.jpg"
+                    alt="Toyota Camry"
+                >
+                <h3>Toyota Camry</h3>
+                <p class="plate">А123АА 161</p>
+                <p><strong>Водитель:</strong> Иванов И.В.</p>
+                <p><strong>Пробег:</strong> 87 450 км</p>
+                <p class="status active">● В работе</p>
+                <label class="fav">
+                    <input type="checkbox">
+                    <span>В избранное</span>
+                </label>
+                <a class="text-link" href="#vehicles">Подробнее</a>
+            </article>
+
+            <article class="card vehicle-card">
+                <span class="badge">NEW</span>
+                <img
+                    class="car-image"
+                    src="images/transit.jpg"
+                    alt="Ford Transit"
+                >
+                <h3>Ford Transit</h3>
+                <p class="plate">В456ВВ 16</p>
+                <p><strong>Водитель:</strong> Марьенков З.М.</p>
+                <p><strong>Пробег:</strong> 126 800 км</p>
+                <p class="status service">● Скоро на ТО</p>
+                <label class="fav">
+                    <input type="checkbox">
+                    <span>В избранное</span>
+                </label>
+                <a class="text-link" href="#vehicles">Подробнее</a>
+            </article>
+
+            <article class="card vehicle-card">
+                <span class="badge">NEW</span>
+                <img
+                    class="car-image"
+                    src="images/solaris.jpg"
+                    alt="Hyundai Solaris"
+                >
+                <h3>Hyundai Solaris</h3>
+                <p class="plate">Е789КЕ 161</p>
+                <p><strong>Водитель:</strong> Ахтямов Р.Р.</p>
+                <p><strong>Пробег:</strong> 63 200 км</p>
+                <p class="status active">● В работе</p>
+                <label class="fav">
+                    <input type="checkbox">
+                    <span>В избранное</span>
+                </label>
+                <a class="text-link" href="#vehicles">Подробнее</a>
+            </article>
+
+            <article class="card vehicle-card">
+                <span class="badge">NEW</span>
+                <img
+                    class="car-image"
+                    src="images/polo.jpg"
+                    alt="Volkswagen Polo"
+                >
+                <h3>Volkswagen Polo</h3>
+                <p class="plate">К246МР 161</p>
+                <p><strong>Водитель:</strong> Андреев Е.Ю.</p>
+                <p><strong>Пробег:</strong> 91 600 км</p>
+                <p class="status repair">● В ремонте</p>
+                <label class="fav">
+                    <input type="checkbox">
+                    <span>В избранное</span>
+                </label>
+                <a class="text-link" href="#vehicles">Подробнее</a>
+            </article>
+
+            <article class="card vehicle-card">
+                <span class="badge">NEW</span>
+                <img
+                    class="car-image"
+                    src="images/rio.jpg"
+                    alt="Kia Rio"
+                >
+                <h3>Kia Rio</h3>
+                <p class="plate">М567ОР 16</p>
+                <p><strong>Водитель:</strong> Крылов Г.Ю.</p>
+                <p><strong>Пробег:</strong> 54 100 км</p>
+                <p class="status active">● В работе</p>
+                <label class="fav">
+                    <input type="checkbox">
+                    <span>В избранное</span>
+                </label>
+                <a class="text-link" href="#vehicles">Подробнее</a>
+            </article>
+
+            <article class="card vehicle-card">
+                <span class="badge">NEW</span>
+                <img
+                    class="car-image"
+                    src="images/octavia.jpg"
+                    alt="Skoda Octavia"
+                >
+                <h3>Skoda Octavia</h3>
+                <p class="plate">Р321СТ 161</p>
+                <p><strong>Водитель:</strong> Ахмадуллин А.А.</p>
+                <p><strong>Пробег:</strong> 72 350 км</p>
+                <p class="status service">● Плановое ТО</p>
+                <label class="fav">
+                    <input type="checkbox">
+                    <span>В избранное</span>
+                </label>
+                <a class="text-link" href="#vehicles">Подробнее</a>
+            </article>
+        </section>
+
+        <section class="layout" aria-label="Информация и фильтры">
+            <aside class="sidebar">
+                <h3>Фильтр статусов</h3>
+                <nav class="sidebar-nav" aria-label="Фильтр автомобилей">
+                    <a class="filter-link selected" href="#vehicles">Все автомобили</a>
+                    <a class="filter-link" href="#vehicles">В работе</a>
+                    <a class="filter-link" href="#vehicles">Скоро на ТО</a>
+                    <a class="filter-link" href="#vehicles">В ремонте</a>
+                </nav>
+
+                <h3>Быстрые действия</h3>
+                <a class="filter-link" href="#request">Создать заявку</a>
+                <a class="filter-link" href="#projects">Открыть отчёт</a>
+            </aside>
+
+            <section class="content">
+                <p class="eyebrow">Контроль состояния</p>
+                <h2>Требуют внимания</h2>
+
+                <article class="notice warning">
+                    <h3>🔧 Ford Transit — техническое обслуживание</h3>
+                    <p>
+                        До следующего ТО осталось около 300 км. Рекомендуется
+                        запланировать обслуживание автомобиля.
+                    </p>
+                </article>
+
+                <article class="notice danger">
+                    <h3>⚠ Volkswagen Polo — заявка на ремонт</h3>
+                    <p>
+                        Водитель сообщил о постороннем шуме при торможении.
+                        Заявка имеет высокий приоритет.
+                    </p>
+                </article>
+
+                <article class="notice info">
+                    <h3>📄 Kia Rio — страховка</h3>
+                    <p>
+                        Срок действия полиса заканчивается через 18 дней.
+                        Необходимо продлить страховку.
+                    </p>
+                </article>
+
+                <a class="text-link" href="#dashboard">Посмотреть все уведомления</a>
+            </section>
+        </section>
+
+        <section class="section-heading" id="projects">
+            <p class="eyebrow">Возможности системы</p>
+            <h2>Модули FleetControl</h2>
+            <p>
+                Основные разделы, которые помогают компании вести учёт
+                транспорта и контролировать расходы.
+            </p>
+        </section>
+
+        <section class="projects-grid" aria-label="Модули системы">
+            <article class="card project-card">
+                <p class="project-icon" aria-hidden="true">🚗</p>
+                <h3>Учёт автомобилей</h3>
+                <p>
+                    Хранение данных о марке, модели, госномере, пробеге и
+                    текущем статусе автомобиля.
+                </p>
+                <a class="text-link" href="#vehicles">Перейти к автомобилям</a>
+            </article>
+
+            <article class="card project-card">
+                <p class="project-icon" aria-hidden="true">🔧</p>
+                <h3>Контроль ТО</h3>
+                <p>
+                    Планирование обслуживания по дате и пробегу, а также
+                    автоматические напоминания.
+                </p>
+                <a class="text-link" href="#dashboard">Посмотреть уведомления</a>
+            </article>
+
+            <article class="card project-card">
+                <p class="project-icon" aria-hidden="true">⛽</p>
+                <h3>Расходы на топливо</h3>
+                <p>
+                    Учёт заправок, расходов на ремонт и анализ стоимости
+                    содержания автомобилей.
+                </p>
+                <a class="text-link" href="#dashboard">Открыть отчёт</a>
+            </article>
+
+            <article class="card project-card">
+                <p class="project-icon" aria-hidden="true">🛠</p>
+                <h3>Заявки на ремонт</h3>
+                <p>
+                    Создание заявок водителями, назначение исполнителей и
+                    контроль статуса выполнения.
+                </p>
+                <a class="text-link" href="#request">Создать заявку</a>
+            </article>
+        </section>
+
+        <section class="form-section" id="request">
+            <section class="form-intro">
+                <p class="eyebrow">Обратная связь</p>
+                <h2>Создать заявку на ремонт</h2>
+                <p>
+                    Заполните форму, если автомобиль требует диагностики,
+                    ремонта или внепланового технического обслуживания.
+                </p>
+            </section>
+
+            <form class="request-form" action="#" method="post">
+                <label for="name">Ваше имя</label>
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Например, Иванов Иван"
+                    required
+                >
+
+                <label for="vehicle">Автомобиль</label>
+                <select id="vehicle" name="vehicle" required>
+                    <option value="">Выберите автомобиль</option>
+                    <option>Toyota Camry — А123АА 161</option>
+                    <option>Ford Transit — В456ВВ 16</option>
+                    <option>Hyundai Solaris — Е789КЕ 161</option>
+                    <option>Volkswagen Polo — К246МР 161</option>
+                    <option>Kia Rio — М567ОР 16</option>
+                    <option>Skoda Octavia — Р321СТ 161</option>
+                </select>
+
+                <label for="priority">Приоритет заявки</label>
+                <select id="priority" name="priority" required>
+                    <option value="">Выберите приоритет</option>
+                    <option>Низкий</option>
+                    <option>Средний</option>
+                    <option>Высокий</option>
+                    <option>Критический</option>
+                </select>
+
+                <label for="message">Описание проблемы</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Опишите неисправность автомобиля..."
+                    required
+                ></textarea>
+
+                <label class="form-check">
+                    <input type="checkbox" required>
+                    <span>Я подтверждаю корректность введённых данных</span>
+                </label>
+
+                <button class="btn submit-button" type="submit">
+                    Отправить заявку
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 EvgenIIControl — учебный проект по CSS</p>
+    </footer>
+
+    <a class="scroll-top" href="#top" aria-label="Вернуться наверх">↑</a>
+
+    <script>
+        const scrollButton = document.querySelector(".scroll-top");
+
+        window.addEventListener("scroll", () => {
+            const isVisible = window.scrollY > 300;
+
+            scrollButton.classList.toggle("visible", isVisible);
+        });
+    </script>
+</body>
+</html>
